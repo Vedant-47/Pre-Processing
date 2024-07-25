@@ -13,15 +13,33 @@ This project provides a Python class for processing and analyzing data. It inclu
 - Dataset splitting for machine learning
 - Output to CSV or MongoDB
 
-## Dependencies
-- pymongo
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scikit-learn
-- category_encoders
-- scipy
+
+## Dataset Overview
+This project processes a car dataset and generates three main outputs:
+
+1. Processed Data: The full dataset after all cleaning and preprocessing steps.
+2. Train Data: A subset of the processed data for training machine learning models.
+3. Test Data: A subset of the processed data for testing machine learning models.
+
+Note: These datasets are provided in the attached zip file. They demonstrate the results of the data processing pipeline and can be used for further analysis or model training.
+
+## Installation
+To use this project, follow these steps:
+
+1. Ensure you have Python 3.7+ installed on your system.
+2. Clone this repository to your local machine.
+3. Install the required dependencies:
+   - pymongo
+   - pandas
+   - numpy
+   - matplotlib
+   - seaborn
+   - scikit-learn
+   - category_encoders
+   - scipy
+4. Install MongoDB on your system if not already present. Follow the official MongoDB installation guide for your operating system.
+5. Start the MongoDB service on your local machine.
+6. Update the MongoDB connection string in the code if necessary (default is "mongodb://localhost:27017/").
 
 ## Usage
 The `CarDataProcessor` class provides an interactive interface for data processing. Users can:
