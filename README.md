@@ -21,7 +21,10 @@ This project processes a car dataset and generates three main outputs:
 2. Train Data: A subset of the processed data for training machine learning models.
 3. Test Data: A subset of the processed data for testing machine learning models.
 
-Note: These datasets are provided in the attached zip file. They demonstrate the results of the data processing pipeline and can be used for further analysis or model training.
+These datasets are provided in the attached zip file. They demonstrate the results of the data processing pipeline and can be used for further analysis or model training.
+
+Important Note: The CSV files in the zip are exported from MongoDB for your reference. To use this code, you need to import the original record dataset into MongoDB before running the CarDataProcessor. The code is designed to work directly with MongoDB collections, not CSV files.
+
 
 ## Installation
 To use this project, follow these steps:
@@ -42,15 +45,18 @@ To use this project, follow these steps:
 6. Update the MongoDB connection string in the code if necessary (default is "mongodb://localhost:27017/").
 
 ## Usage
-The `CarDataProcessor` class provides an interactive interface for data processing. Users can:
-1. Connect to a MongoDB database
-2. Choose columns to drop
-3. Handle null values
-4. Remove duplicates
-5. Encode categorical variables
-6. Detect and handle outliers
-7. Split the dataset into training and testing sets
-8. Output processed data to CSV or MongoDB
+To use this project:
+
+1. Ensure you have imported your car dataset into MongoDB.
+2. Run the CarDataProcessor script.
+3. Follow the interactive prompts to process your data:
+   - Choose columns to drop
+   - Handle null values
+   - Remove duplicates
+   - Encode categorical variables
+   - Detect and handle outliers
+   - Split the dataset into training and testing sets
+4. The processed data will be saved back to MongoDB and optionally exported as CSV.
 
 ## Key Methods
 - `dropping_values()`: Allows user to drop specified columns
